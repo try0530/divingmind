@@ -1,0 +1,458 @@
+:root {
+    --main-color: #102432;
+    --second-color:  #FFCC4A;
+    --third-color: #ffffff;
+}
+
+* {
+    /*border: 1px black solid;*/
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+h2 {
+    text-align: center;
+    padding: 30px;
+    color: var(--main-color);
+}
+
+/*let every section have similar height*/
+.info-section {
+    min-height: 50vh;
+}
+
+/*Mobile first, less than 600*/
+/*hamburger code from codepen*/
+/*hide the checkbox*/
+input {
+    display: none;
+}
+
+.logo {
+    padding-left: 1rem;
+    line-height: 50px;
+    width: 50px;
+    padding-top: 15px;
+}
+
+label {
+    float: right;
+    padding-right: 1rem;
+    line-height: 50px;
+    width: 50px;
+    padding-top: 15px;
+}
+
+/*navbar list*/
+.menu {
+    clear: both;
+    background: var(--main-color);
+    max-height: 0;
+    overflow: hidden;
+    transition: .5s; /*animation second*/
+}
+
+.menu-li {
+    text-align: center;
+    border-bottom: 1px solid var(--third-color);
+}
+
+.menu-li a {
+    display: block;
+    padding: 10px 0;
+    font-size: 18px;
+    color: var(--third-color);
+}
+
+.menu-li a:hover {
+    background: var(--main-font-color);
+    color: #ffffff;
+}
+
+/*to control when to show the navbar list*/
+input:checked ~ .menu {
+  max-height: 300px;
+}
+/*hamburger end*/
+
+/*brand start*/
+.brand {
+    background-image: url("../images/brand-background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.brand-title {
+    color: var(--third-color);
+    position: absolute;
+    bottom: 50px;
+    left: 5%;
+}
+
+.brand-title h1 {
+    font-size: 3rem;
+}
+/*brand end*/
+
+/*about start*/
+.about {
+    padding-bottom: 10px;
+}
+.about-detail {
+    display: grid;
+    grid-template-areas: "teach-experience" 
+                         "practice" 
+                         "resources"
+                         "video";
+    grid-gap: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.teach-experience {
+    grid-area: teach-experience;
+}
+
+.practice {
+    grid-area: practice;
+}
+
+.resources {
+    grid-area: resources;
+}
+
+.about-video {
+    grid-area: video;
+    text-align: center;
+}
+
+.about-video h3 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.about-video-source {
+    width: 80%;
+}
+
+
+
+/*setting of each statistic*/
+/*reference from RIT website*/
+.about-statistic {
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.about-header {
+    font-size: 3rem;
+    line-height: 5rem;
+    color: var(--second-color);
+    -webkit-text-stroke: 1px var(--main-color);
+}
+
+.about-title {
+    font-size: 1rem;
+    line-height: 3rem;
+    font-weight: 700;
+    color: var(--main-color);
+}
+
+.about-describ {
+    font-size: 0.875rem;
+    color: #343a40;
+}
+/*setting of each statistic end*/
+
+/*about end*/
+.pool-freediving {
+    display: block;
+    max-width: 100%;
+}
+
+/*image line*/
+.image-line {
+    min-height: 20vh;
+    overflow: hidden;
+    background: url("../images/about-information.jpg") center center no-repeat;
+    background-size: cover;
+
+}
+
+/*class information*/
+.class-detail {
+    display: grid;
+    grid-template-areas:"aida2"
+                        "aida3"
+                        "aida4"
+                        "instructor"
+                        "others";
+    justify-content: space-around;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.aida2 {
+    grid-area: aida2;
+}
+
+.aida3 {
+    grid-area: aida3;
+}
+
+.aida4 {
+    grid-area: aida4;
+}
+
+.instructor {
+    grid-area: instructor;
+}
+
+.others {
+    grid-area: others;
+}
+
+.class-detail div {
+    width: 10rem;
+    height: 8rem;
+    border-radius: 16px;
+    background-color: var(--main-color);
+    position: relative;
+}
+
+.class-detail p, .class-detail h3 {
+    color: var(--third-color);
+    margin: 10px;
+}
+
+/*make the learn more at the bottom*/
+.class-detail a{
+    position: absolute;
+    color: var(--second-color);
+    margin: 10px;
+    bottom: 0;
+    right: 0;
+
+}
+
+/*class information end*/
+
+/*image wall*/
+.image-wall {
+    display: grid;
+    grid-template-areas: "img01 img02 img03"
+                         "img04 img02 img05";
+}
+
+.image-wall img {
+    width: 100%;
+}
+
+.container01 {
+    grid-area: img01;
+}
+
+.container02 {
+    grid-area: img02;
+}
+
+.container03 {
+    grid-area: img03;
+}
+
+.container04 {
+    grid-area: img04;
+}
+
+.container05 {
+    grid-area: img05;
+}
+
+/*make the img into square*/
+.img-container {
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+}
+
+.img-container img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+/*image wall end*/
+
+/*location*/
+.location h3 {
+    text-align: center;
+}
+
+.maps {
+    display: grid;
+    grid-template-areas: "taipei"
+                         "hengchun";
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.location iframe {
+    display: block;
+    max-width: 95%;
+    margin: 10px;
+}
+
+.taipei {
+    grid-area: taipei;
+}
+
+.hengchun {
+    grid-area: hengchun;
+}
+/*location end*/
+
+/*back to the top setting*/
+.back-top {
+    /*button style*/
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--main-color);
+
+    border: 1px solid var(--second-color);
+
+    /*setting it to move with the page*/
+    position: fixed;
+    bottom: 50px;
+    right: 10px;
+}
+
+.back-top i {
+    font-size: 30px;
+    color: var(--third-color);
+}
+
+.hide {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.show {
+    opacity: 0.9;
+    transition: opacity 0.3s ease-in-out;
+}
+/*back to the top setting end*/
+
+/*footer setting*/
+footer {
+    background: var(--main-color);
+    color: var(--third-color);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.copy-right{
+    padding-top: 10px;
+}
+
+footer .fa-brands {
+    color: var(--third-color);
+    font-size: 24px;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+}
+
+.contact-info p {
+    margin: 0 10px;
+}
+
+.contact-info a {
+    margin: 0 10px;
+}
+/*footer end*/
+
+@media only screen and (min-width:600px) {
+    /*navbar setting
+      code from codepen*/
+    label, input {
+        display: none;
+    }
+
+    .fa-earth-americas {
+        padding-top: 0;
+    }
+
+    .navbar {
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu {
+        overflow: visible;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .menu-li {
+        padding-left: 1.5rem;
+        border-bottom: none;
+    }
+
+    .current-page {
+        border-bottom: 3px solid var(--main-font-color);
+    }
+    /*navbar setting end*/
+
+    /*about*/
+    .about-detail {
+        grid-template-areas: "teach-experience practice resources"
+                             "video video video";
+    }
+    /*about end*/
+
+    /*class information*/
+    .class-detail {
+        grid-template-areas:". aida2 aida3 aida4 ."
+                            ". instructor . others .";
+        gap: 50px; 
+    }
+    /*class information end*/
+
+    /*location*/
+    .maps {
+        grid-template-areas: "taipei hengchun"
+    }
+    /*location end*/
+
+    /*footer*/
+    footer {
+        justify-content: space-around;
+    }
+    /*footer end*/
+}
